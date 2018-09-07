@@ -1,0 +1,13 @@
+management:
+  metrics:
+    web:
+      server:
+        # do not enable timing every method by default
+        auto-time-requests: false
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus
+  endpoint:
+    prometheus:
+      enabled: true
