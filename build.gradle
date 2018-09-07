@@ -87,7 +87,7 @@ dependencies {
     provided 'org.immutables:value'
 
     //LOGGING
-    compile 'biz.paluch.logging:logstash-gelf:1.12.0'
+    compile 'de.appelgriepsch.logback:logback-gelf-appender:1.5'
 
     //TESTS
     testCompile 'org.assertj:assertj-core'
