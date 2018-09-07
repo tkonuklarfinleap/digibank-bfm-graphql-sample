@@ -1,0 +1,12 @@
+version: '3.1'
+
+services:
+  db:
+    restart: always
+    image: postgres:9.6.9
+    environment:
+      POSTGRES_DB: infinitec
+      POSTGRES_USER: infinitec
+      POSTGRES_PASS: infinitec
+    ports:
+      - 5432:5432
