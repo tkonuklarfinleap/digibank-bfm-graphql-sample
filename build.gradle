@@ -105,7 +105,7 @@ dependencies {
 }
 
 configurations {
-  // We don't want to use logback.
+  // We don't want to use log4j.
   all*.exclude group: 'org.apache.logging.log4j'
 }
 
