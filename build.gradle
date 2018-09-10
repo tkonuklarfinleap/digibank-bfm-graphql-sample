@@ -142,8 +142,8 @@ tasks.withType(Checkstyle) {
 }
 
 test {
-  useJUnit {
-    excludeCategories 'solutions.infinitec.nova.app.IntegrationTest'
+  useJUnitPlatform {
+    excludeTags 'integration-test'
   }
 }
 
@@ -151,8 +151,8 @@ task integrationTest(type: Test, description: 'Runs the integration tests.', gro
   beforeTest { descriptor ->
     logger.lifecycle("Running test: ${descriptor}")
   }
-  useJUnit {
-    includeCategories 'solutions.infinitec.nova.app.IntegrationTest'
+  useJUnitPlatform {
+    includeTags 'integration-test'
   }
 }
 
