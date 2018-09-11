@@ -1,4 +1,4 @@
-package solutions.infinitec.nova.app;
+package solutions.infinitec.nova;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
