@@ -1,6 +1,6 @@
-# Nova os-manager
+# Nova project template
 
-This project routes requests to appropriate components and microproducts 
+This project is a template which should be used as a core to create a new project within Nova platform.
 
 ## Libraries&Tools
 * Java 10
