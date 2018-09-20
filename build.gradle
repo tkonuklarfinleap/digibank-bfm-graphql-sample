@@ -68,6 +68,7 @@ dependencyManagement {
     dependency 'info.solidsoft.mockito:mockito-java8:2.3.0'
     dependency 'org.mockito:mockito-junit-jupiter:2.21.0'
     dependency 'com.puppycrawl.tools:checkstyle:8.12'
+    dependency 'de.siegmar:logback-gelf:1.1.0'
   }
 }
 
@@ -92,7 +93,7 @@ dependencies {
   provided 'org.immutables:value'
 
   //LOGGING
-  compile 'de.appelgriepsch.logback:logback-gelf-appender:1.5'
+  compile 'de.siegmar:logback-gelf'
 
   //TESTS
   testCompile 'org.assertj:assertj-core'
