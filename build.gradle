@@ -69,6 +69,7 @@ dependencyManagement {
     dependency 'org.mockito:mockito-junit-jupiter:2.21.0'
     dependency 'com.puppycrawl.tools:checkstyle:8.12'
     dependency 'de.siegmar:logback-gelf:1.1.0'
+    dependency 'org.springframework.cloud:spring-cloud-starter-sleuth:2.0.1.RELEASE'
   }
 }
 
@@ -94,6 +95,7 @@ dependencies {
 
   //LOGGING
   compile 'de.siegmar:logback-gelf'
+  compile 'org.springframework.cloud:spring-cloud-starter-sleuth'
 
   //TESTS
   testCompile 'org.assertj:assertj-core'
