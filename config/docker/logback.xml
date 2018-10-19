@@ -18,9 +18,6 @@
     <layout class="de.siegmar.logbackgelf.GelfLayout">
       <includeRootCauseData>true</includeRootCauseData>
       <includeLevelName>true</includeLevelName>
-      <shortPatternLayout class="ch.qos.logback.classic.PatternLayout">
-        <pattern>${CONSOLE_LOG_PATTERN}</pattern>
-      </shortPatternLayout>
       <staticField>app_name:${APP_NAME}</staticField>
       <staticField>hostname:${HOSTNAME}</staticField>
     </layout>
