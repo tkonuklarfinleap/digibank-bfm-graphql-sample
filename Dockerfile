@@ -1,5 +1,8 @@
 FROM openjdk:10-jre
 
+# curl is used in docker-entrypoint.sh to retrieve AWS meta-data
+RUN apt-get update && apt-get install -y curl
+
 EXPOSE 8080
 
 CMD ["./bin/docker-entrypoint.sh"]
