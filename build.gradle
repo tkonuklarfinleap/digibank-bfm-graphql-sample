@@ -102,6 +102,7 @@ dependencies {
   testImplementation 'org.junit.jupiter:junit-jupiter-params'
   testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
   testImplementation 'org.mockito:mockito-junit-jupiter'
+  testImplementation 'org.springframework.cloud:spring-cloud-stream-test-support'
 
   //CODE QUALITY
   checkstyle 'com.puppycrawl.tools:checkstyle'

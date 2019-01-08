@@ -4,6 +4,3 @@ spring:
   cloud:
     config:
       enabled: false
-  autoconfigure:
-    exclude:
-      - org.springframework.cloud.stream.config.BindingServiceConfiguration
