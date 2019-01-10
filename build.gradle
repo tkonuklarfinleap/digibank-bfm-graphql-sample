@@ -69,7 +69,7 @@ dependencies {
   // CLOUD CONFIG
   compile 'org.springframework.retry:spring-retry'
   compile 'org.springframework.cloud:spring-cloud-starter-config'
-  compile 'org.springframework.cloud:spring-cloud-starter-bus-amqp'
+  compile 'org.springframework.cloud:spring-cloud-starter-bus-kafka'
 
   //SERVICE DISCOVERY
   compile 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
@@ -102,6 +102,7 @@ dependencies {
   testImplementation 'org.junit.jupiter:junit-jupiter-params'
   testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
   testImplementation 'org.mockito:mockito-junit-jupiter'
+  testImplementation 'org.springframework.cloud:spring-cloud-stream-test-support'
 
   //CODE QUALITY
   checkstyle 'com.puppycrawl.tools:checkstyle'
