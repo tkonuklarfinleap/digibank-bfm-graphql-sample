@@ -50,7 +50,7 @@ dependencyManagement {
 
 dependencyManagement {
   dependencies {
-    dependency 'io.vavr:vavr:0.9.2'
+    dependency 'io.vavr:vavr:0.10.0'
     dependency 'org.immutables:value:2.7.4'
     dependency 'org.projectlombok:lombok:1.18.4'
     dependency 'info.solidsoft.mockito:mockito-java8:2.5.0'
