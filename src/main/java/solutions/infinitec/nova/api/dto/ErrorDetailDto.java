@@ -5,18 +5,11 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import io.vavr.collection.List;
 import org.immutables.value.Value;
-import solutions.infinitec.nova.domain.ErrorCodeType;
 
 @Value.Immutable
-@JsonSerialize(as = ImmutableErrorResponse.class)
-@JsonDeserialize(as = ImmutableErrorResponse.class)
-public interface ErrorResponse {
-
-  @JsonProperty("type")
-  ErrorCodeType type();
-
-  @JsonProperty("status")
-  int status();
+@JsonSerialize(as = ImmutableErrorDetailDto.class)
+@JsonDeserialize(as = ImmutableErrorDetailDto.class)
+public interface ErrorDetailDto {
 
   @JsonProperty("code")
   String code();
@@ -26,10 +19,4 @@ public interface ErrorResponse {
 
   @JsonProperty("message")
   String message();
-
-  @JsonProperty("traceId")
-  String traceId();
-
-  @JsonProperty("errorDetails")
-  List<ErrorDetailDto> errorDetails();
 }
