@@ -1,4 +1,4 @@
-FROM openjdk:10-jre
+FROM openjdk:11-jre
 
 # curl is used in docker-entrypoint.sh to retrieve AWS meta-data
 RUN apt-get update && apt-get install -y curl
