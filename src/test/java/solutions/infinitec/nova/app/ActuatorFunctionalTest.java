@@ -1,17 +1,15 @@
 package solutions.infinitec.nova.app;
 
-import com.fasterxml.jackson.databind.node.ObjectNode;
-import com.fasterxml.jackson.databind.node.TextNode;
 import org.junit.jupiter.api.Test;
 import org.springframework.http.HttpStatus;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import static org.hamcrest.CoreMatchers.is;
 
 class ActuatorFunctionalTest extends CommonFunctionalTest {
 
   @Test
   void thatHealthEndpointContainsCurrentServerStatus() {
-    final ObjectNode root = requestSpecification()
+    requestSpecification()
       .when()
       .get("/actuator/health")
       .then()
@@ -19,10 +17,26 @@ class ActuatorFunctionalTest extends CommonFunctionalTest {
       .and()
       .assertThat()
       .statusCode(HttpStatus.OK.value())
-      .and()
-      .extract().as(ObjectNode.class);
+      .body("status", is("UP"));
+  }
 
-    assertThat(root.get("status")).isInstanceOf(TextNode.class);
-    assertThat(root.get("status").textValue()).isEqualTo("UP");
+  @Test
+  void thatInfoEndpointContainsGitAndBuildInfo() {
+    requestSpecification()
+      .when()
+      .get("/actuator/info")
+      .then()
+      .log().all()
+      .and()
+      .assertThat()
+      .statusCode(HttpStatus.OK.value())
+
+      .body("git.branch", is("feature/update-template"))
+      .body("git.commit.time", is("2019-02-07T14:09:31Z"))
+      .body("build.artifact", is("nova-template"))
+      .body("build.name", is("nova-template"))
+      .body("build.time", is("2019-01-30T18:12:40.981Z"))
+      .body("build.version", is("0.0.1-SNAPSHOT"))
+      .body("build.group", is("solutions.infinitec.nova"));
   }
 }
