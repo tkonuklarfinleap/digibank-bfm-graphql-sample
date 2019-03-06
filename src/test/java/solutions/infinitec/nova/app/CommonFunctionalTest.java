@@ -11,7 +11,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.web.server.LocalServerPort;
 import org.springframework.context.ApplicationEventPublisher;
-import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
@@ -24,7 +23,6 @@ import static solutions.infinitec.nova.app.IntegrationTest.INTEGRATION_TEST_TAG;
 @TestPropertySource(properties = {
   "eureka.client.enabled=false",
 })
-@ActiveProfiles("test")
 @Tag(INTEGRATION_TEST_TAG)
 public abstract class CommonFunctionalTest {
 
