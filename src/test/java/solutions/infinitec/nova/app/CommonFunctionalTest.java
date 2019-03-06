@@ -3,12 +3,15 @@ package solutions.infinitec.nova.app;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
-import org.junit.Before;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.web.server.LocalServerPort;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
+
+import static solutions.infinitec.nova.app.IntegrationTest.INTEGRATION_TEST_TAG;
 
 @ExtendWith(SpringExtension.class)
 @SpringBootTest(
@@ -17,17 +20,18 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 @TestPropertySource(properties = {
   "eureka.client.enabled=false",
 })
+@Tag(INTEGRATION_TEST_TAG)
 public abstract class CommonFunctionalTest {
 
   @LocalServerPort
   private int serverPort;
 
-  @Before
-  public void before() {
+  @BeforeAll
+  public static void before() {
     RestAssured.enableLoggingOfRequestAndResponseIfValidationFails();
   }
 
-  protected RequestSpecification requestSpecification() {
+  public RequestSpecification requestSpecification() {
     return RestAssured
       .given()
       .log().all()

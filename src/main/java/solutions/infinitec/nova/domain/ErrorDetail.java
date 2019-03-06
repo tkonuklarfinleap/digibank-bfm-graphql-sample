@@ -4,20 +4,11 @@ import io.vavr.collection.List;
 import org.immutables.value.Value;
 
 @Value.Immutable
-public interface Error {
-
-  ErrorCodeType type();
+public interface ErrorDetail {
 
   String code();
 
   List<String> arguments();
 
   String message();
-
-  @Value.Derived
-  default int status() {
-    return type().statusCode();
-  }
-
-  List<ErrorDetail> errorDetails();
 }

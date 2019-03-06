@@ -3,7 +3,7 @@
 This project is a template which should be used as a core to create a new project within Nova platform.
 
 ## Libraries&Tools
-* Java 10
+* Java 11
 * Gradle
 * Spring Boot 2
   - Actuator
