@@ -11,7 +11,7 @@ class ActuatorFunctionalTest extends CommonFunctionalTest {
   void thatHealthEndpointContainsCurrentServerStatus() {
     requestSpecification()
       .when()
-      .get("/actuator/health")
+      .get("/internal/health")
       .then()
       .log().all()
       .and()
@@ -24,7 +24,7 @@ class ActuatorFunctionalTest extends CommonFunctionalTest {
   void thatInfoEndpointContainsGitAndBuildInfo() {
     requestSpecification()
       .when()
-      .get("/actuator/info")
+      .get("/internal/info")
       .then()
       .log().all()
       .and()
