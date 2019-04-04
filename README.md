@@ -68,7 +68,7 @@ Move to project root directory and execute ```docker-compose up```
 
 ## Health check
 
-The service provides health check at `GET /internal/health`. 
+As per [ADR 0005](https://github.com/infinitecsolutions/architecture-decision-records/blob/master/adrs/0005-health-checks.md), the service provides health check at `GET /internal/health`. 
 [See here](https://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-endpoints.html#production-ready-health) for more information. 
 Example response is as follows:
 
