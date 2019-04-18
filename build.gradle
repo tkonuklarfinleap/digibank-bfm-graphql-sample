@@ -116,9 +116,6 @@ configurations {
 test {
   useJUnitPlatform()
 
-  // Remove after archiving of test reports in Docker is done.
-  ignoreFailures = ignoreTestFailures.toBoolean()
-
   // set heap size for the test JVM
   minHeapSize = "256m"
   maxHeapSize = "256m"
