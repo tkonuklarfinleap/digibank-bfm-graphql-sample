@@ -20,6 +20,7 @@
       <includeLevelName>true</includeLevelName>
       <staticField>app_name:${APP_NAME}</staticField>
       <staticField>hostname:${HOSTNAME}</staticField>
+      <staticField>environment:${ENVIRONMENT}</staticField>
     </layout>
   </appender>
 
