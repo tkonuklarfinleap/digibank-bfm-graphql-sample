@@ -1,4 +1,4 @@
-package solutions.infinitec.nova.domain;
+package solutions.infinitec.digibank.domain;
 
 import org.springframework.http.HttpStatus;
 

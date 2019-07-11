@@ -25,7 +25,7 @@ wrapper {
   gradleVersion = '5.1'
 }
 
-group 'solutions.infinitec.nova'
+group 'solutions.infinitec.digibank'
 
 bootJar {
   archiveBaseName = 'application'
@@ -57,6 +57,9 @@ dependencyManagement {
     dependency 'com.puppycrawl.tools:checkstyle:8.16'
     dependency 'de.siegmar:logback-gelf:1.1.0'
     dependency 'org.springframework.cloud:spring-cloud-starter-sleuth:2.0.1.RELEASE'
+    dependency 'com.graphql-java:graphql-spring-boot-starter:5.0.2'
+    dependency 'com.graphql-java:graphiql-spring-boot-starter:5.0.2'
+    dependency 'com.graphql-java:graphql-java-tools:5.2.4'
   }
 }
 
@@ -66,21 +69,14 @@ dependencies {
   compile 'org.springframework.boot:spring-boot-starter-actuator'
   compile 'io.micrometer:micrometer-registry-prometheus'
 
-  // CLOUD CONFIG
-  compile 'org.springframework.retry:spring-retry'
-  compile 'org.springframework.cloud:spring-cloud-starter-config'
-  compile 'org.springframework.cloud:spring-cloud-starter-bus-kafka'
+  //GRAPHQL
+  compile 'com.graphql-java:graphql-spring-boot-starter'
+  compile 'com.graphql-java:graphiql-spring-boot-starter'
+  compile 'com.graphql-java:graphql-java-tools'
 
-  //SERVICE DISCOVERY
-  compile 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
-
-  // PERSISTENCE
-//  compile 'org.springframework.boot:spring-boot-starter-jooq'
-//  jooqRuntime 'org.postgresql:postgresql'
-//  jooqRuntime 'javax.activation:activation'
-//  jooqRuntime 'org.glassfish.jaxb:jaxb-runtime'
-//  runtime 'org.postgresql:postgresql'
-//  compile 'org.flywaydb:flyway-core'
+  //HTTP CLIENT
+  compile 'org.springframework.cloud:spring-cloud-starter-openfeign'
+  compile 'io.github.openfeign:feign-httpclient'
 
   //COMMON
   implementation 'io.vavr:vavr'

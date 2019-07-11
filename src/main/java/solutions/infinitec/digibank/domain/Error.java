@@ -1,4 +1,4 @@
-package solutions.infinitec.nova.domain;
+package solutions.infinitec.digibank.domain;
 
 import io.vavr.collection.List;
 import org.immutables.value.Value;

@@ -1,13 +1,13 @@
-package solutions.infinitec.nova.api.rest;
+package solutions.infinitec.digibank.api.rest;
 
 import brave.Tracer;
 import org.springframework.http.ResponseEntity;
-import solutions.infinitec.nova.api.dto.ErrorDetailDto;
-import solutions.infinitec.nova.api.dto.ErrorResponse;
-import solutions.infinitec.nova.api.dto.ImmutableErrorDetailDto;
-import solutions.infinitec.nova.api.dto.ImmutableErrorResponse;
-import solutions.infinitec.nova.domain.Error;
-import solutions.infinitec.nova.domain.ErrorDetail;
+import solutions.infinitec.digibank.api.dto.ErrorDetailDto;
+import solutions.infinitec.digibank.api.dto.ErrorResponse;
+import solutions.infinitec.digibank.api.dto.ImmutableErrorDetailDto;
+import solutions.infinitec.digibank.api.dto.ImmutableErrorResponse;
+import solutions.infinitec.digibank.domain.Error;
+import solutions.infinitec.digibank.domain.ErrorDetail;
 
 public abstract class CommonController {
 

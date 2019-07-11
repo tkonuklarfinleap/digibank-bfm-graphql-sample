@@ -1,4 +1,4 @@
-package solutions.infinitec.nova.api.dto;
+package solutions.infinitec.digibank.api.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
