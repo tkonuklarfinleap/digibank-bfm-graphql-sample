@@ -18,3 +18,13 @@ management:
 nova:
   business:
     url: ${NOVA_CORE_BUSINESS_URI:https://novadev-latest-os-partner-api-gateway-module.nova.infinitec.solutions}
+
+graphql:
+  servlet:
+    mapping: /graphql
+    enabled: true
+
+graphiql:
+  endpoint:
+    graphql: /graphql
+  mapping: /graphiql
